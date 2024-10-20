@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Conteúdo</title>
+    <script>
+        function trocarConteudo() {
+            
+            var titulo = document.getElementById("titulo");
+            var paragrafo = document.getElementById("paragrafo");
+
+            
+            var temp = titulo.innerHTML;
+            titulo.innerHTML = paragrafo.innerHTML;
+            paragrafo.innerHTML = temp;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="titulo">Título Original</h1>
+    <p id="paragrafo">Este é um parágrafo com texto diferente.</p>
+    <button onclick="trocarConteudo()">Trocar Conteúdo</button>
+</body>
+</html>

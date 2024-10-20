@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Endereço</title>
+    <script>
+        window.onload = function() {
+            
+            var logradouro = document.getElementById("logradouro").innerHTML;
+            var numero = document.getElementById("numero").innerHTML;
+            var bairro = document.getElementById("bairro").innerHTML;
+            var complemento = document.getElementById("complemento").innerHTML;
+            var cidade = document.getElementById("cidade").innerHTML;
+
+            var enderecoCompleto = logradouro + ", " + numero + ", " + bairro + ", " + complemento + ", " + cidade;
+            document.getElementById("enderecoCompleto").innerHTML = enderecoCompleto;
+        };
+    </script>
+</head>
+<body>
+    <p id="logradouro">Rua das Flores</p>
+    <p id="numero">123</p>
+    <p id="bairro">Jardim das Rosas</p>
+    <p id="complemento">Apartamento 45</p>
+    <p id="cidade">São Paulo</p>
+
+    <h2>Endereço Completo:</h2>
+    <p id="enderecoCompleto"></p>
+</body>
+</html>
