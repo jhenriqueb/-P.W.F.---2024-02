@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Boa Tarde e Boa Noite</title>
+</head>
+<body>
+<h1>Alteração de Texto.</h1>
+    <button onclick="boaTarde()">Boa Tarde</button>
+    <button onclick="boaNoite()">Boa Noite</button>
+
+    <div id="mensagem"></div>
+
+    <script>
+        function boaTarde() {
+            document.getElementById('mensagem').innerText = 'Boa Tarde';
+        }
+
+        function boaNoite() {
+            document.getElementById('mensagem').innerText = 'Boa Noite';
+        }
+    </script>
+
+</body>
+</html>

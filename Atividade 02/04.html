@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Strings</title>
+</head>
+<body>
+    <h1>Métodos de Strings em JavaScript</h1>
+
+    <input type="text" id="texto" placeholder="Digite seu texto" />
+
+    <button onclick="exibirTamanho()">Exibir Tamanho</button>
+    <div id="resultadoTamanho"></div>
+
+    <button onclick="converterMinusculo()">Converter para Minúsculo</button>
+    <div id="resultadoMinusculo"></div>
+
+    <button onclick="substituirVogais()">Substituir Vogais</button>
+    <div id="resultadoSubstituicao"></div>
+
+    <button onclick="removerEspacos()">Remover Espaços</button>
+    <div id="resultadoTrim"></div>
+
+    <script>
+        function exibirTamanho() {
+            const texto = document.getElementById('texto').value;
+            document.getElementById('resultadoTamanho').innerText = `Tamanho: ${texto.length}`;
+        }
+
+        function converterMinusculo() {
+            const texto = document.getElementById('texto').value;
+            document.getElementById('resultadoMinusculo').innerText = `Minúsculo: ${texto.toLowerCase()}`;
+        }
+
+        function substituirVogais() {
+            const texto = document.getElementById('texto').value;
+            const substituido = texto.replace(/a/g, '@').replace(/e/g, '3').replace(/i/g, '1').replace(/o/g, '0');
+            document.getElementById('resultadoSubstituicao').innerText = `Substituição: ${substituido}`;
+        }
+
+        function removerEspacos() {
+            const texto = document.getElementById('texto').value;
+            document.getElementById('resultadoTrim').innerText = `Sem Espaços: '${texto.trim()}'`;
+        }
+    </script>
+</body>
+</html>

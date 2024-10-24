@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Math Simplificadas</title>
+</head>
+<body>
+    <h1>Funções Math</h1>
+
+    <button onclick="exibirNumeroRandomico()">Número Randômico (1-10)</button>
+    <div id="resultado"></div>
+
+    <input type="number" id="numeroAbs" placeholder="Número" />
+    <button onclick="exibirValorAbsoluto()">Valor Absoluto</button>
+    
+    <input type="number" id="num1" placeholder="Num 1" />
+    <input type="number" id="num2" placeholder="Num 2" />
+    <button onclick="exibirMaiorNumero()">Maior Número</button>
+
+    <input type="number" id="numeroReal" placeholder="Número Real" step="any" />
+    <button onclick="exibirNumeroArredondado()">Arredondar</button>
+
+    <input type="number" id="base" placeholder="Base" />
+    <input type="number" id="expoente" placeholder="Expoente" />
+    <button onclick="exibirPotencia()">Potência</button>
+
+    <script>
+        function exibirNumeroRandomico() {
+            document.getElementById('resultado').innerText = `Número: ${Math.floor(Math.random() * 10) + 1}`;
+        }
+        function exibirValorAbsoluto() {
+            const numero = Math.abs(parseFloat(document.getElementById('numeroAbs').value));
+            document.getElementById('resultado').innerText = `Valor Absoluto: ${numero}`;
+        }
+        function exibirMaiorNumero() {
+            const maior = Math.max(parseFloat(document.getElementById('num1').value), parseFloat(document.getElementById('num2').value));
+            document.getElementById('resultado').innerText = `Maior Número: ${maior}`;
+        }
+        function exibirNumeroArredondado() {
+            const arredondado = Math.round(parseFloat(document.getElementById('numeroReal').value));
+            document.getElementById('resultado').innerText = `Arredondado: ${arredondado}`;
+        }
+        function exibirPotencia() {
+            const potencia = Math.pow(parseFloat(document.getElementById('base').value), parseFloat(document.getElementById('expoente').value));
+            document.getElementById('resultado').innerText = `Resultado: ${potencia}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Interativos</title>
+</head>
+<body>
+
+    <h2>Exibir Nome Completo</h2>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="sobrenome" placeholder="Sobrenome">
+    <button onclick="exibirNomeCompleto()">Exibir Nome Completo</button>
+    <p id="resultadoNome"></p>
+
+    <h2>Soma e Diferença</h2>
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultadoCalculo"></p>
+
+    <h2>Limpar Caixa</h2>
+    <input type="text" id="caixaLimpar" placeholder="Digite algo">
+    <button onclick="limpar()">Limpar</button>
+
+    <h2>Copiar Texto</h2>
+    <input type="text" id="caixa1" placeholder="Texto original">
+    <input type="text" id="caixa2" placeholder="Texto copiado">
+    <button onclick="copiarTexto()">Copiar</button>
+
+    <script>
+        function exibirNomeCompleto() {
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            document.getElementById('resultadoNome').innerText = `${nome} ${sobrenome}`;
+        }
+
+        function calcular() {
+            const num1 = parseFloat(document.getElementById('numero1').value);
+            const num2 = parseFloat(document.getElementById('numero2').value);
+            const soma = num1 + num2;
+            const diferenca = num1 - num2;
+            document.getElementById('resultadoCalculo').innerText = `Soma: ${soma}, Diferença: ${diferenca}`;
+        }
+
+        function limpar() {
+            document.getElementById('caixaLimpar').value = '';
+        }
+
+        function copiarTexto() {
+            const texto = document.getElementById('caixa1').value;
+            document.getElementById('caixa2').value = texto;
+        }
+    </script>
+
+</body>
+</html>
