@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Operações Matemáticas Básicas</title>
+</head>
+<body>
+    <h2>Digite dois números:</h2>
+    
+    <label for="numero1">Número 1:</label>
+    <input type="number" id="numero1" placeholder="Digite o primeiro número">
+    
+    <label for="numero2">Número 2:</label>
+    <input type="number" id="numero2" placeholder="Digite o segundo número">
+    
+    <button onclick="calcularOperacoes()">Calcular</button>
+    
+    <h3>Resultados:</h3>
+    <p>Soma: <span id="soma"></span></p>
+    <p>Subtração: <span id="subtracao"></span></p>
+    <p>Multiplicação: <span id="multiplicacao"></span></p>
+    <p>Divisão: <span id="divisao"></span></p>
+
+    <script>
+        function calcularOperacoes() {
+            let numero1 = parseFloat(document.getElementById("numero1").value);
+            let numero2 = parseFloat(document.getElementById("numero2").value);
+
+            if (isNaN(numero1) || isNaN(numero2)) {
+                alert("Por favor, insira dois números válidos.");
+                return;
+            }
+
+            let soma = numero1 + numero2;
+            let subtracao = numero1 - numero2;
+            let multiplicacao = numero1 * numero2;
+            let divisao = numero2 !== 0 ? numero1 / numero2 : "Divisão por zero não permitida";
+
+            document.getElementById("soma").innerText = soma;
+            document.getElementById("subtracao").innerText = subtracao;
+            document.getElementById("multiplicacao").innerText = multiplicacao;
+            document.getElementById("divisao").innerText = divisao;
+        }
+    </script>
+</body>
+</html>

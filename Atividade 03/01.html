@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Zeros à Esquerda</title>
+</head>
+<body>
+    <h2>Digite um número:</h2>
+    <input type="text" id="numeroInput" placeholder="Digite um número">
+    <button onclick="adicionarZeros()">Adicionar Zeros</button>
+    
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        function adicionarZeros() {
+            let numeroTexto = document.getElementById("numeroInput").value;
+
+            let numeroComZeros = numeroTexto.padStart(numeroTexto.length + 5, "0");
+
+            document.getElementById("resultado").innerText = numeroComZeros;
+        }
+    </script>
+</body>
+</html>
