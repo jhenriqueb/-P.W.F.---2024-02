@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir/Ocultar Componente</title>
+</head>
+<body>
+    <button onclick="toggleVisibility()">Exibir/Ocultar</button>
+    <div id="componente" style="visibility: visible; border: 1px solid black; padding: 10px; margin-top: 10px;">
+        Este é o componente que será exibido/ocultado.
+    </div>
+
+    <script>
+        function toggleVisibility() {
+            const elemento = document.getElementById("componente");
+            elemento.style.visibility = elemento.style.visibility === "hidden" ? "visible" : "hidden";
+        }
+    </script>
+</body>
+</html>

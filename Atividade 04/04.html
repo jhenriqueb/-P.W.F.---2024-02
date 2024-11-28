@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Classe</title>
+    <style>
+        .caixa {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+        }
+        .novoEstilo {
+            background-color: lightgreen;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Alterar Estilo com Classe CSS</h2>
+    <button id="alterarClasse" onclick="alterarClasse()">Alterar Estilo</button>
+    <div id="caixaClasse" class="caixa">Texto com estilo alternado!</div>
+
+    <script>
+        function alterarClasse() {
+            const elemento = document.getElementById("caixaClasse");
+            elemento.classList.toggle("novoEstilo");
+        }
+    </script>
+</body>
+</html>

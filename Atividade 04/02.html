@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentar/Reduzir Fonte</title>
+</head>
+<body>
+    <button onclick="aumentarFonte()">Aumentar Fonte</button>
+    <button onclick="reduzirFonte()">Reduzir Fonte</button>
+    <div id="texto" style="font-size: 16px; margin-top: 10px;">
+        Este texto terá o tamanho da fonte ajustado.
+    </div>
+
+    <script>
+        function aumentarFonte() {
+            const elemento = document.getElementById("texto");
+            let tamanhoAtual = parseInt(window.getComputedStyle(elemento).fontSize);
+            elemento.style.fontSize = (tamanhoAtual + 2) + "px";
+        }
+
+        function reduzirFonte() {
+            const elemento = document.getElementById("texto");
+            let tamanhoAtual = parseInt(window.getComputedStyle(elemento).fontSize);
+            elemento.style.fontSize = (tamanhoAtual - 2) + "px";
+        }
+    </script>
+</body>
+</html>

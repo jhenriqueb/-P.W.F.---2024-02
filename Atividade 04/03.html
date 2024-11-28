@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Noturno</title>
+</head>
+<body style="background-color: white; color: black;">
+    <label for="hora">Digite a hora (0-23): </label>
+    <input type="number" id="hora" min="0" max="23">
+    <button onclick="aplicarModo()">Aplicar Modo</button>
+
+    <script>
+        function aplicarModo() {
+            const hora = parseInt(document.getElementById("hora").value);
+            if (hora >= 18 || hora < 6) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>
